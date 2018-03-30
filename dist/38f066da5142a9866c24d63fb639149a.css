@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 85vw;
+  max-height: 90vh;
+  background-color: #111;
+  color: #fff;
+  font-size: 18px;
+  padding: 5px;
+  font-family: 'Questrial', sans-serif; }
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("b42319c5b74b2e152ba284a2b143777c.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media (max-width: 460px) {
+    .background {
+      width: 105%;
+      height: 105%;
+      background-size: cover;
+      position: fixed; } }
+
+.bg-blur {
+  animation-name: blur-background;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards; }
+
+@keyframes blur-background {
+  0% {
+    filter: blur(0) grayscale(0%) brightness(100%); }
+  100% {
+    filter: blur(9px) grayscale(25%) brightness(70%); } }
+
+.iframe-yt-song {
+  position: relative;
+  top: 40px;
+  left: 54%;
+  transform: translateX(-50%); }
+  @media (max-width: 1240px) {
+    .iframe-yt-song {
+      width: 470px;
+      margin: 0 auto; } }
+  @media (max-width: 580px) {
+    .iframe-yt-song {
+      left: 61%; } }
+  @media (max-width: 500px) {
+    .iframe-yt-song {
+      width: 105%;
+      left: 63%; } }
+  @media (max-width: 360px) {
+    .iframe-yt-song {
+      left: 1px;
+      width: 95vw;
+      transform: none; } }
+  .iframe-yt-song .ytp-large-play-button ytp-button {
+    transform: scale(0.8) !important;
+    top: 13px !important;
+    position: relative !important; }
+
+.track-title, .track-author, .track-time {
+  opacity: 0;
+  position: relative;
+  top: -300px;
+  width: 20%; }
+
+.track-title {
+  animation-duration: 250ms;
+  animation-fill-mode: forwards; }
+
+.track-author {
+  animation-delay: 250ms;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards; }
+
+.track-time {
+  animation-delay: 550ms;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards; }
+
+@keyframes fadeInTrackTitle {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    top: 10px; } }
+
+.animation1 {
+  animation-name: fadeInTrackTitle; }
+
+.navbar {
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.919);
+  padding: 25px 10px 0 10px;
+  transition: left ease-out 780ms, opacity ease-out 800ms;
+  opacity: 0;
+  left: 95vw; }
+  @media (max-width: 1140px) {
+    .navbar {
+      width: 100vw;
+      left: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      z-index: 102; } }
+  @media (max-width: 460px) {
+    .navbar {
+      left: 103vw;
+      width: 105%; } }
+
+.navbar:hover {
+  opacity: 1;
+  left: 75vw;
+  transition: left ease-in 250ms, opacity ease-in 200ms; }
+
+.navbar:hover ~ body::after {
+  filter: none; }
+
+.track-list {
+  list-style-type: none;
+  height: 100%;
+  overflow-y: scroll; }
+  .track-list p {
+    padding-bottom: 10px; }
+  .track-list .list-item {
+    margin-bottom: 10px;
+    color: #646464;
+    cursor: context-menu;
+    transition: all ease-out 600ms; }
+    .track-list .list-item .track-time {
+      float: right; }
+  .track-list .list-item:hover {
+    color: #fff;
+    transition: all ease-in 150ms; }
+  @media (max-width: 1140px) {
+    .track-list {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 25%;
+      font-size: 1.07em;
+      width: 40%; }
+      .track-list .list-item {
+        color: rgba(255, 255, 255, 0.686);
+        width: 100% !important; }
+      .track-list p {
+        margin: 0 auto;
+        letter-spacing: 2px;
+        margin-bottom: 5px; } }
+  @media (max-width: 768px) {
+    .track-list {
+      width: 50%;
+      height: 94%; } }
+  @media (max-width: 580px) {
+    .track-list {
+      width: 50%;
+      height: 90%;
+      top: 80px; } }
+  @media (max-width: 520px) {
+    .track-list {
+      width: 60%; } }
+  @media (max-width: 460px) {
+    .track-list {
+      width: 80%; } }
+  @media (max-width: 360px) {
+    .track-list {
+      width: 90%;
+      height: 85%; } }
+
+.mobile-menu {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  letter-spacing: -6px;
+  background-color: #111;
+  padding: 15px 15px 15px 10px;
+  box-shadow: 8px 6px 10px rgba(19, 19, 19, 0.426);
+  border: 1px solid rgba(255, 255, 255, 0.316);
+  z-index: 999;
+  display: none; }
+  @media (max-width: 1140px) {
+    .mobile-menu {
+      display: block; } }
+  @media (max-width: 768px) {
+    .mobile-menu {
+      right: 18px; } }
+  @media (max-width: 580px) {
+    .mobile-menu {
+      top: 20px;
+      right: 14px; } }
+
+.mobile-menu-animation-in {
+  animation: mobile-menu-button-in;
+  animation-fill-mode: forwards;
+  animation-duration: 400ms; }
+
+@keyframes mobile-menu-button-in {
+  0% {
+    letter-spacing: -6px; }
+  100% {
+    letter-spacing: 1px; } }
+
+.mobile-menu-animation-out {
+  animation: mobile-menu-button-out;
+  animation-fill-mode: forwards;
+  animation-duration: 400ms; }
+
+@keyframes mobile-menu-button-out {
+  0% {
+    letter-spacing: 1px; }
+  100% {
+    letter-spacing: -6px; } }
+
+.liryc-wrapper {
+  width: 40vw;
+  height: 60vh;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, 25px);
+  vertical-align: middle;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 100;
+  padding: 10px 15px 0 10px;
+  text-align: left;
+  display: none;
+  animation-name: fade-in-lirycs-wrapper;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards; }
+  @media (max-width: 1240px) {
+    .liryc-wrapper {
+      width: 470px; } }
+  @media (max-width: 500px) {
+    .liryc-wrapper {
+      width: 90vw; } }
+
+@keyframes fade-in-lirycs-wrapper {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 70%; }
+
+::-webkit-scrollbar-track {
+  background: #000; }
+
+::-webkit-scrollbar-thumb {
+  background: #f1f9ff !important; }
+
+.verseClass {
+  padding: 5px 0 10px 10px;
+  opacity: 0;
+  position: relative;
+  right: -999px;
+  animation-name: fade-in-zwrotka1;
+  animation-duration: 600ms;
+  animation-fill-mode: forwards; }
+
+.verseInfoClass {
+  padding-top: 15px;
+  opacity: 0;
+  position: relative;
+  left: -999px;
+  animation-name: fade-in-refren1;
+  animation-delay: 200ms;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards; }
+
+@keyframes fade-in-zwrotka1 {
+  0% {
+    opacity: 0; }
+  50% {
+    right: -5px; }
+  100% {
+    opacity: 1;
+    right: 0; } }
+
+@keyframes fade-in-refren1 {
+  0% {
+    opacity: 0; }
+  50% {
+    left: -5px; }
+  100% {
+    opacity: 1;
+    left: 0; } }

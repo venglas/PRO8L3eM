@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////
+////////// background, default other styles /////////////
+////////////////////////////////////////////////////////
+
+$default-font-color: #fff;
+$default-bg-color: #111;
+$bg-img: url('../img/front.jpg');
+$blur-animation-power: blur(9px);
+
+
+//////////////////////////////////////////////////////////
+/////////////// lirycs wrapper, scrollbar ///////////////
+////////////////////////////////////////////////////////
+
+$lirycs-wrapper-height: 60vh;
+$lirycs-wrapper-width: 40vw;
+$lirycs-wrapper-padding: 10px 15px 0 10px;
+$lirycs-wrapper-text-align: left;
+$lirycs-wrapper-animation-duration: 800ms;
+$scrollbar-width: 3px;
+$scrollbar-height: 70%;
+$scrollbar-bg-color: #000;
+$scrollbar-thumb-color: rgb(241, 249, 255) !important;
+//mobile
+$lirycs-wrapper-width-max-1240: 470px;
+
+//////////////////////////////////////////////////////////
+//////////////////////// menu ///////////////////////////
+////////////////////////////////////////////////////////
+
+$menu-width: 25vw;
+$menu-height: 100vh;
+$menu-bg: rgba(17, 17, 17, 0.919);
+$menu-padding: 25px 10px 0 10px;
+$menu-font-color: rgb(100, 100, 100);
+$menu-hover-font-color: #fff;

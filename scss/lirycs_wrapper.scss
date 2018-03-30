@@ -1,0 +1,81 @@
+.liryc-wrapper{
+    width: $lirycs-wrapper-width; height: $lirycs-wrapper-height;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, 25px);
+    vertical-align: middle;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 100;
+
+    padding: $lirycs-wrapper-padding;
+    text-align: $lirycs-wrapper-text-align;
+
+    display: none;
+
+    animation-name: fade-in-lirycs-wrapper;
+    animation-duration: $lirycs-wrapper-animation-duration;
+    animation-fill-mode: forwards;
+    @media (max-width: 1240px){
+        width: $lirycs-wrapper-width-max-1240;
+    }
+    @media (max-width: 500px){
+        width: 90vw;
+    }
+}
+
+@keyframes fade-in-lirycs-wrapper {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+::-webkit-scrollbar {
+    width: $scrollbar-width;
+    height: $scrollbar-height;
+}
+
+::-webkit-scrollbar-track {
+    background: $scrollbar-bg-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+}
+
+.verseClass{
+    padding: 5px 0 10px 10px;
+
+    opacity: 0;
+    position: relative;
+    right: -999px;
+    
+    animation-name: fade-in-zwrotka1;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+}
+
+.verseInfoClass{
+    padding-top: 15px;
+    
+    opacity: 0;
+    position: relative;
+    left: -999px;
+
+    animation-name: fade-in-refren1;
+    animation-delay: 200ms;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in-zwrotka1{
+    0% {opacity: 0;}
+    50% {right: -5px;}
+    100% {opacity: 1; right: 0;}
+}
+
+@keyframes fade-in-refren1{
+    0% {opacity: 0;}
+    50% {left: -5px;}
+    100% {opacity: 1; left: 0;}
+}

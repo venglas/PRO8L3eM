@@ -1,0 +1,143 @@
+//body, header title info, background styles, iframe yt song
+
+body{
+    width: 85vw; max-height: 90vh;
+    background-color: $default-bg-color;
+    color: $default-font-color;
+    font-size: 18px;
+    padding: 5px;
+
+    font-family: 'Questrial', sans-serif;
+}
+
+.background{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    background-image: $bg-img;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (max-width: 460px){
+        width: 105%;
+        height: 105%;
+        background-size: cover;
+        position: fixed;
+    }
+}
+
+.bg-blur{
+    animation-name: blur-background;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes blur-background {
+    0% {filter: blur(0) grayscale(0%) brightness(100%)}
+    100% {filter: $blur-animation-power grayscale(25%) brightness(70%)}
+}
+
+
+///////////////////// concept for display up left side track info animation /////////////////////
+
+// .track-title {
+//     opacity: 0;
+//     animation-name: track-info;
+//     animation-duration: 650ms;
+//     animation-fill-mode: forwards;
+// }
+
+// .track-author{
+//     opacity: 0;
+//     animation-name: track-info;
+//     animation-delay: 400ms;
+//     animation-duration: 650ms;
+//     animation-fill-mode: forwards;
+// }
+
+// .track-time {
+//     opacity: 0;
+//     animation-name: track-info;
+//     animation-delay: 800ms;
+//     animation-duration: 650ms;
+//     animation-fill-mode: forwards;
+// }
+
+// @keyframes track-info {
+//     0% {opacity: 0;}
+//     100% {opacity: 1;}
+// }
+
+
+/////////////////////////iframe song yt //////////////////////////
+.iframe-yt-song{
+    position: relative;
+    top: 40px;
+    left: 54%;
+    transform: translateX(-50%);
+    @media (max-width: 1240px){
+        width: 470px;
+        margin: 0 auto;
+    }
+    @media (max-width: 580px){
+        left: 61%;
+    }
+    @media (max-width: 500px){
+        width: 105%;
+        left: 63%;
+    }
+    @media (max-width: 360px){
+        left: 1px;
+        width: 95vw;
+        transform: none;
+    }
+    .ytp-large-play-button ytp-button{
+       // @media (max-width: 340px){
+            transform: scale(.8) !important;
+            top: 13px !important;
+            position: relative !important;
+       // }
+        
+    }
+}
+
+
+
+
+////////////////left up side info bar //////////////////////
+.track-title, .track-author, .track-time {
+    opacity: 0;
+    position: relative;
+    top: -300px;
+    width: 20%;
+}
+.track-title{
+   // animation-name: fadeInTrackTitle;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+.track-author{
+   // animation-name: fadeInTrackTitle;
+    animation-delay: 250ms;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+.track-time{
+    //animation-name: fadeInTrackTitle;
+    animation-delay: 550ms;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInTrackTitle {
+    0% {opacity: 0;}
+    100% {opacity: 1; top: 10px}
+}
+
+.animation1{
+    animation-name: fadeInTrackTitle;
+}
