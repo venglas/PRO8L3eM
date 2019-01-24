@@ -1,12 +1,25 @@
 {
   "name": "problem",
   "version": "1.0.0",
-  "description": "",
+  "description": "* live: https://venglas.github.io/PRO8L3eM/dist/index.html",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^1.11.0",
+    "parcel-bundler": "^1.11.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venglas/PRO8L3eM.git"
+  },
+  "bugs": {
+    "url": "https://github.com/venglas/PRO8L3eM/issues"
+  },
+  "homepage": "https://github.com/venglas/PRO8L3eM#readme"
 }
